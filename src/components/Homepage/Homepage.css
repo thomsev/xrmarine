@@ -1,0 +1,30 @@
+.background-image-section {
+  background: url("your_background_image_path.jpg") no-repeat center
+    center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.card-section {
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+}
+
+.card {
+  background-color: #fff;
+  color: #000;
+}
+
+.card img {
+  height: 200px; /* Adjust based on your preference */
+  object-fit: cover;
+}
+
+.card-title {
+  color: #007bff; /* Matching the section background or any color you prefer */
+}
