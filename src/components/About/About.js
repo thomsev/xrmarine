@@ -1,51 +1,43 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import heroImage from "../../assets/images/holidaze.jpeg";
-import "./About.css";
 
-const About = () => {
+function About() {
   return (
-    <Container className="about-page-container my-5">
-      {/* Hero Section */}
-      <Row className="about-page-hero-row align-items-center mb-4">
-        <Col>
-          <Image
-            src={heroImage}
-            alt="Holidaze Destination"
-            className="about-page-hero-image"
-          />
-        </Col>
-      </Row>
-
-      {/* Content Sections */}
-      <Row>
-        <Col md={12}>
-          <h2 className="text-center mb-4">Our Mission</h2>
-          <p>
-            Holidaze is dedicated to helping you discover the world's hidden
-            gems for your events and getaways. Our curated selection of venues
-            ensures unique experiences tailored to your desires.
-          </p>
-        </Col>
-      </Row>
-
-      {/* Team Section */}
-      <Row>
-        <Col md={12}>
-          <h3 className="text-center mb-4">Meet the Team</h3>
-          {/* Iterate over team members and create cards/profiles */}
-        </Col>
-      </Row>
-
-      {/* Testimonials or Gallery */}
-      <Row>
-        <Col md={12}>
-          <h3 className="text-center mb-4">Customer Stories</h3>
-          {/* Carousel or grid of customer testimonials or images */}
-        </Col>
-      </Row>
-    </Container>
+    <div
+      className="about-section"
+      style={{ padding: "20px", textAlign: "center" }}
+    >
+      <h1>About Us</h1>
+      <p>
+        Welcome to our website! We are passionate about providing quality
+        content and services to our users.
+      </p>
+      <p>
+        Our mission is to enrich lives through innovative solutions and engaging
+        experiences. Founded in [Year], we have grown into a trusted resource in
+        our industry, committed to excellence and continuous improvement.
+      </p>
+      <p>
+        Whether you're looking for [specific information or services], we strive
+        to offer the best. Our team is dedicated to ensuring you have access to
+        the most up-to-date and relevant information.
+      </p>
+      <h2>Our Values</h2>
+      <ul>
+        <li>
+          Innovation: We constantly seek new ways to improve and make a
+          difference.
+        </li>
+        <li>
+          Integrity: We believe in being honest and transparent in all our
+          dealings.
+        </li>
+        <li>
+          Excellence: We set high standards for ourselves and our services.
+        </li>
+      </ul>
+      <p>Thank you for visiting our site. We look forward to serving you!</p>
+    </div>
   );
-};
+}
 
 export default About;
