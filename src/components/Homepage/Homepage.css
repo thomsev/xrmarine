@@ -1,14 +1,37 @@
+/* This positions your navigation links over the image */
 .background-image-section {
-  background: url("../Assets/bakgrunn.webp") no-repeat center;
+  position: relative; /* This makes it a reference for absolute positioning */
+  background: url("../Assets/bakgrunn.webp") no-repeat center center;
+  background-size: cover; /* Ensures the image covers the entire section */
   height: 100vh;
+  width: 100%; /* Ensures the section takes full width of the viewport */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
   text-align: center;
+  margin: 0; /* Removes default margins */
+  padding: 0; /* Removes default padding */
 }
 
+/* Additional styles for the navigation bar to make it transparent and overlay */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent !important; /* Important to override default styles */
+  border: none; /* Removes any border */
+  z-index: 10; /* Ensures the navbar is above other content */
+}
+
+/* Ensure that the content below the navbar doesn't get hidden under it */
+.content-below-navbar {
+  padding-top: 56px; /* Adjust this value based on the actual height of your navbar */
+}
+
+/* Your other styles remain unchanged */
 .card-section {
   background-color: #007bff; /* Blue background */
   color: #fff;
