@@ -1,16 +1,19 @@
 /* Navbar link styles */
 .navbar-nav .nav-link {
-  font-size: 1.25rem; /* Larger font size for nav links */
+  font-size: 1.66rem;
+  font-weight: 700; /* Larger font size for nav links */
   color: #fff; /* White text color */
   margin-right: 10px; /* Spacing between links */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Ensure that links are not underlined by default */
 }
 
-/* Change color on hover */
+/* Add underline on hover */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-  color: #ccefff; /* Lighter color on hover/focus */
-  text-decoration: none; /* Remove underline on hover/focus */
+  color: #ffffff; /* Keep color white on hover/focus */
+  text-decoration: underline; /* Add underline on hover/focus */
 }
 
 /* Currently active link styles */
@@ -31,4 +34,65 @@
 .navbar-brand:focus {
   color: #ccefff; /* Lighter color on hover/focus */
   text-decoration: none; /* Remove underline on hover/focus */
+}
+
+/* Default logo size */
+.navbar-brand img {
+  width: 380px; /* Larger logo width for wide screens */
+  height: auto; /* Maintain aspect ratio */
+  transition: width 0.3s ease; /* Smooth size transition */
+}
+
+/* Responsive styles for tablets and mobile devices */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); /* Semi-transparent white background */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    width: 100vw; /* Ensure it spans the full width of the viewport */
+    top: 56px; /* Adjust this to the height of your collapsed navbar */
+    z-index: 999; /* Ensure the dropdown is above other content */
+  }
+
+  .navbar-nav .nav-link {
+    background-color: rgba(
+      30,
+      144,
+      255,
+      0.8
+    ); /* Semi-transparent blue background */
+    color: #ffffff; /* Ensure text is white for contrast */
+    padding: 10px 15px; /* Add some padding to each link */
+    margin: 0; /* Remove margin */
+    width: 100%; /* Ensure links span the full width of the dropdown */
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    background-color: rgba(30, 144, 255, 1); /* Solid color on hover */
+  }
+
+  /* Adjust logo size for tablets and mobile devices */
+  .navbar-brand img {
+    width: 200px; /* Adjust to a suitable size for smaller devices */
+  }
+}
+
+/* Responsive styles for very small phones */
+@media (max-width: 374px) {
+  .navbar-brand img {
+    width: 100px; /* Smaller logo width for very small screens */
+  }
+}
+
+/* If the logo still overlaps or the menu is squeezed at any point, add another breakpoint */
+@media (max-width: 320px) {
+  .navbar-brand img {
+    width: 80px; /* Adjust size as needed for even smaller screens */
+  }
 }

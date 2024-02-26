@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Homepage.css";
+import cardData from "../Assets/cardData";
 
 const Homepage = () => {
   useEffect(() => {
@@ -10,41 +11,41 @@ const Homepage = () => {
       duration: 1200, // You can adjust the animation duration
     });
   }, []);
-
+  //do h1 with opacity background
   return (
     <div>
       {/* Background Image Section with AOS Animation */}
+      {/* Overskrift og random slagord*/}
       <div className="background-image-section">
-        <h1 data-aos="fade-up">Welcome to Our Site!</h1>
-        <h3 data-aos="fade-up" data-aos-delay="500">
-          Delivering Excellence & Innovation
-        </h3>
+        <div className="text-wrapper">
+          <h1 data-aos="fade-up">Rogaland Marine</h1>
+          <h3 data-aos="fade-up" data-aos-delay="500">
+            {" "}
+            Der kvalitet møter havet. Fra produksjon til perfeksjon i hver bølge
+          </h3>
+        </div>
       </div>
 
       {/* Card Section with Blue Background */}
       <div className="card-section text-center">
         <div className="container py-5">
           <div className="row">
-            {/* Loop to generate cards */}
-            {Array.from({ length: 6 }).map((_, idx) => (
+            {cardData.map((card) => (
               <div
                 className="col-md-4 mb-4"
-                key={idx}
+                key={card.id}
                 data-aos="fade-up"
-                data-aos-delay={`${100 * idx}`}
+                data-aos-delay={`${100 * card.id}`}
               >
                 <div className="card">
                   <img
-                    src="your_image_path.jpg"
+                    src={card.imgSrc}
                     className="card-img-top"
-                    alt="..."
+                    alt={card.altText}
                   />
                   <div className="card-body">
-                    <h2 className="card-title">Card Title {idx + 1}</h2>
-                    <p className="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content.
-                    </p>
+                    <h2 className="card-title">{card.title}</h2>
+                    <p className="card-text">{card.text}</p>
                   </div>
                 </div>
               </div>

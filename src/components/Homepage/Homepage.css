@@ -14,7 +14,6 @@
   margin: 0; /* Removes default margins */
   padding: 0; /* Removes default padding */
 }
-
 /* Additional styles for the navigation bar to make it transparent and overlay */
 .navbar {
   position: absolute;
@@ -33,7 +32,11 @@
 
 /* Your other styles remain unchanged */
 .card-section {
-  background-color: #007bff; /* Blue background */
+  background-image: linear-gradient(
+    135deg,
+    #92ffc0 10%,
+    #002661 100%
+  ); /* Blue background */
   color: #fff;
 }
 
@@ -49,4 +52,87 @@
 
 .card-title {
   color: #007bff; /* Matching the section background or any color you prefer */
+}
+.background-image-section h1 {
+  color: #ffffff; /* White text color */
+  font-size: 6em; /* Larger font size for h1 */
+  font-weight: 999;
+  margin: 0 0 20px; /* Space between the elements */
+  padding: 0;
+  transition: transform 0.3s ease-out, font-size 0.3s ease-out;
+}
+.background-image-section h3 {
+  color: #ffffff; /* White text color */
+  font-size: 3em; /* Larger font size for h1 */
+  font-weight: 800;
+  margin: 0 0 20px; /* Space between the elements */
+  padding: 0;
+  transition: transform 0.3s ease-out, font-size 0.3s ease-out;
+}
+.background-image-section h1,
+.background-image-section h3 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1); /* Adds a dark shadow for contrast */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1200px) {
+  .background-image-section h1 {
+    font-size: 2.5em; /* Smaller font size for h1 */
+  }
+
+  .background-image-section h3 {
+    font-size: 1.2em; /* Smaller font size for h3 */
+  }
+}
+
+@media (max-width: 992px) {
+  .background-image-section {
+    padding: 80px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .background-image-section h1 {
+    font-size: 2em;
+  }
+
+  .background-image-section h3 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-image-section {
+    padding: 60px 10px;
+  }
+
+  .background-image-section h1 {
+    font-size: 1.75em;
+  }
+
+  .background-image-section h3 {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 576px) {
+  .background-image-section {
+    padding: 40px 5px;
+  }
+
+  .background-image-section h1 {
+    font-size: 1.5em;
+  }
+
+  .background-image-section h3 {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 375px) {
+  .background-image-section h1 {
+    font-size: 1.2em; /* Even smaller font size for very small screens */
+  }
+
+  .background-image-section h3 {
+    font-size: 0.7em;
+  }
 }
