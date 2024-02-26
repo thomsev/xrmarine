@@ -79,20 +79,20 @@
 
   /* Adjust logo size for tablets and mobile devices */
   .navbar-brand img {
-    width: 200px; /* Adjust to a suitable size for smaller devices */
+    width: 333px; /* Adjust to a suitable size for smaller devices */
   }
 }
 
 /* Responsive styles for very small phones */
 @media (max-width: 374px) {
   .navbar-brand img {
-    width: 100px; /* Smaller logo width for very small screens */
+    width: 222px; /* Smaller logo width for very small screens */
   }
 }
 
 /* If the logo still overlaps or the menu is squeezed at any point, add another breakpoint */
 @media (max-width: 320px) {
   .navbar-brand img {
-    width: 80px; /* Adjust size as needed for even smaller screens */
+    width: 220px; /* Adjust size as needed for even smaller screens */
   }
 }

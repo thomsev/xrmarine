@@ -20,7 +20,7 @@ const Homepage = () => {
         <div className="text-wrapper">
           <h1 data-aos="fade-up">Rogaland Marine</h1>
           <h3 data-aos="fade-up" data-aos-delay="500">
-            Der kvalitet møter havet. Fra produksjon til perfeksjon i hver bølge
+            Der kvalitet møter havet. Fra produksjon til perfeksjon
           </h3>
         </div>
       </div>
