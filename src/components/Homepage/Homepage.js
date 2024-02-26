@@ -15,12 +15,10 @@ const Homepage = () => {
   return (
     <div>
       {/* Background Image Section with AOS Animation */}
-      {/* Overskrift og random slagord*/}
       <div className="background-image-section">
         <div className="text-wrapper">
           <h1 data-aos="fade-up">Rogaland Marine</h1>
           <h3 data-aos="fade-up" data-aos-delay="500">
-            {" "}
             Der kvalitet møter havet. Fra produksjon til perfeksjon i hver bølge
           </h3>
         </div>
@@ -39,7 +37,7 @@ const Homepage = () => {
               >
                 <div className="card">
                   <img
-                    src={card.imgSrc}
+                    src={require(`../Assets/${card.imgSrc}`)} // Updated relative path
                     className="card-img-top"
                     alt={card.altText}
                   />

@@ -34,7 +34,7 @@
 .card-section {
   background-image: linear-gradient(
     135deg,
-    #92ffc0 10%,
+    #53b1f0 10%,
     #002661 100%
   ); /* Blue background */
   color: #fff;
@@ -77,11 +77,11 @@
 /* Responsive styles for smaller screens */
 @media (max-width: 1200px) {
   .background-image-section h1 {
-    font-size: 2.5em; /* Smaller font size for h1 */
+    font-size: 3.5em; /* Smaller font size for h1 */
   }
 
   .background-image-section h3 {
-    font-size: 1.2em; /* Smaller font size for h3 */
+    font-size: 2em; /* Smaller font size for h3 */
   }
 }
 
@@ -91,48 +91,40 @@
   }
 
   .background-image-section h1 {
-    font-size: 2em;
+    font-size: 3.5em;
   }
 
   .background-image-section h3 {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 
 @media (max-width: 768px) {
-  .background-image-section {
-    padding: 60px 10px;
-  }
-
   .background-image-section h1 {
-    font-size: 1.75em;
+    font-size: 3.2em;
   }
 
   .background-image-section h3 {
-    font-size: 0.9em;
+    font-size: 1.8em;
   }
 }
 
 @media (max-width: 576px) {
-  .background-image-section {
-    padding: 40px 5px;
-  }
-
   .background-image-section h1 {
-    font-size: 1.5em;
+    font-size: 3em;
   }
 
   .background-image-section h3 {
-    font-size: 0.8em;
+    font-size: 1.5em;
   }
 }
 
 @media (max-width: 375px) {
   .background-image-section h1 {
-    font-size: 1.2em; /* Even smaller font size for very small screens */
+    font-size: 2.4em; /* Even smaller font size for very small screens */
   }
 
   .background-image-section h3 {
-    font-size: 0.7em;
+    font-size: 1.2em;
   }
 }
