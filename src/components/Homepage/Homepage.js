@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Homepage.css";
 import cardData from "../Assets/cardData";
+import sponsorsData from "../Assets/sponsorData";
 
 const Homepage = () => {
   useEffect(() => {
@@ -28,16 +29,16 @@ const Homepage = () => {
       <div className="card-section text-center">
         <div className="container py-5">
           <div className="row">
-            {cardData.map((card) => (
+            {cardData.map((card, index) => (
               <div
                 className="col-md-4 mb-4"
-                key={card.id}
+                key={index}
                 data-aos="fade-up"
-                data-aos-delay={`${100 * card.id}`}
+                data-aos-delay={`${100 * index}`}
               >
                 <div className="card">
                   <img
-                    src={require(`../Assets/${card.imgSrc}`)} // Updated relative path
+                    src={require(`../Assets/${card.imgSrc}`)} // Using require to load the image from the Assets folder
                     className="card-img-top"
                     alt={card.altText}
                   />
@@ -46,6 +47,28 @@ const Homepage = () => {
                     <p className="card-text">{card.text}</p>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* Sponsor Logos Section */}
+      <div className="sponsor-section text-center">
+        <div className="container py-5">
+          <div className="row justify-content-center">
+            {sponsorsData.map((sponsor) => (
+              <div className="col-auto mb-4" key={sponsor.id}>
+                <a
+                  href={sponsor.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={require(`../Assets/${sponsor.imgSrc}`)}
+                    className="sponsor-logo"
+                    alt={sponsor.altText}
+                  />
+                </a>
               </div>
             ))}
           </div>
