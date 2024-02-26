@@ -1,78 +1,70 @@
-# Rogaland Marine
+# Getting Started with Create React App
 
-Rogaland Marine is a dynamic web application designed to showcase a range of marine products and services, including boats, motors, and various marine accessories. Built with React, this project aims to deliver a seamless user experience with engaging visuals and up-to-date information for marine enthusiasts.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features
+## Available Scripts
 
-- **Dynamic Product Display**: Showcases boats, motors, and accessories in an engaging layout.
-- **Responsive Design**: Ensures a great experience across devices, from desktops to mobile phones.
-- **Interactive Elements**: Utilizes animations and transitions for a more interactive feel.
-- **Contact Form**: Allows users to easily get in touch with queries or requests.
-- **Sponsor Section**: Highlights partnerships with marine industry brands and companies.
+In the project directory, you can run:
 
-## Getting Started
+### `npm start`
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Prerequisites
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Before installing, ensure you have the following software installed:
+### `npm test`
 
-- Node.js (https://nodejs.org/)
-- npm (comes with Node.js) or yarn (https://yarnpkg.com/)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Installation
+### `npm run build`
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/rogaland-marine.git
-   ```
-2. Navigate to the project directory:
-   ```
-   cd rogaland-marine
-   ```
-3. Install dependencies:
-   ```
-   npm install
-   ```
-   or if you're using yarn:
-   ```
-   yarn install
-   ```
-4. Start the development server:
-   ```
-   npm start
-   ```
-   or with yarn:
-   ```
-   yarn start
-   ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The app should now be running on [http://localhost:3000](http://localhost:3000).
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Usage
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Navigate through the website to explore various sections, including:
+### `npm run eject`
 
-- Home: Introduction and featured products/services.
-- Destinations: Explore marine destinations.
-- Special Offers: Current promotions and offers.
-- About Us: Information about Rogaland Marine.
-- Contact: Contact form and contact information.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Contributing
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-We welcome contributions to Rogaland Marine! Please feel free to submit pull requests or open issues to propose changes or report bugs.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## License
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+## Learn More
 
-## Acknowledgments
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- Special thanks to all the contributors who have invested their time into making Rogaland Marine a valuable resource.
-- Our sponsors and partners for their continuous support.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
----
+### Code Splitting
 
-Remember to replace placeholders like `https://github.com/yourusername/rogaland-marine.git` with the actual URL to your repository and adjust any project-specific details as necessary.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
