@@ -8,23 +8,25 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-nav">
           <Link to="/" className="footer-link">
-            Home
+            Hjem
           </Link>
           <Link to="/venues" className="footer-link">
-            Destinations
+            Veibeskrivelse
           </Link>
           <Link to="/venues" className="footer-link">
-            Special Offers
+            Tilbud
           </Link>
           <Link to="/about" className="footer-link">
-            About Us
+            Om-Oss
           </Link>
           <Link to="/contact" className="footer-link">
-            Contact
+            Kontakt
           </Link>
         </div>
 
-        <p className="footer-copy">© 2023 Holidaze. All rights reserved.</p>
+        <p className="footer-copy">
+          © Rogaland Marine AS. All rights reserved.
+        </p>
       </div>
     </footer>
   );

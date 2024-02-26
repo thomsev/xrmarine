@@ -1,0 +1,70 @@
+/* Footer base styles */
+.footer {
+  background-color: #222; /* Darker shade for a deeper contrast */
+  color: #ddd; /* Light grey text for readability */
+  padding: 2rem 0; /* More vertical padding for a spacious look */
+  font-size: 0.9rem; /* Adjust base font size */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-nav {
+  margin-bottom: 1rem; /* Space between navigation and copy */
+}
+
+.footer-link {
+  color: #bbb; /* Slightly lighter grey for links */
+  margin: 0 15px; /* Spacing between links */
+  position: relative;
+  text-decoration: none; /* No underlines for a cleaner look */
+  transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #007bff; /* Pink underline color */
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #fff; /* Bright white for hover state */
+}
+
+.footer-link:hover::after,
+.footer-link:focus::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+.footer-copy {
+  color: #666; /* Dimmed text color for the copyright */
+  text-align: center;
+  margin-top: 1rem; /* Ensures space is above the copyright text */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-nav {
+    order: 1; /* Adjusts the order if needed, depending on your layout */
+  }
+
+  .footer-copy {
+    order: 2; /* Adjusts the order if needed, depending on your layout */
+  }
+}

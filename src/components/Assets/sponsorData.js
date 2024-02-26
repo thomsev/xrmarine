@@ -4,26 +4,26 @@ const sponsorsData = [
   {
     id: 1,
     imgSrc: "logo1.jpg", // Replace with your sponsor's logo file name
-    altText: "Sponsor 1",
-    link: "http://sponsor1website.com", // Sponsor's website
+    altText: "volvo penta",
+    link: "https://www.volvopenta.com/", // Sponsor's website
   },
   {
     id: 1,
     imgSrc: "logo2.jpg", // Replace with your sponsor's logo file name
-    altText: "Sponsor 1",
+    altText: "inter",
     link: "http://sponsor1website.com", // Sponsor's website
   },
   {
     id: 1,
     imgSrc: "logo3.png", // Replace with your sponsor's logo file name
-    altText: "Sponsor 1",
-    link: "http://sponsor1website.com", // Sponsor's website
+    altText: "kasboll boats",
+    link: "https://www.kaasboll-boats.no/", // Sponsor's website
   },
   {
     id: 1,
     imgSrc: "logo4.png", // Replace with your sponsor's logo file name
-    altText: "Sponsor 1",
-    link: "http://sponsor1website.com", // Sponsor's website
+    altText: "honda marine",
+    link: "https://marine.honda.com/outboards", // Sponsor's website
   },
   // ... other sponsor objects
 ];

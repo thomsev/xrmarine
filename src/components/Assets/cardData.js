@@ -1,7 +1,7 @@
 const cardData = [
   {
     id: 1,
-    title: "Båter & Motorer 1",
+    title: "Båter & Motorer",
     text: "Nye båter og båtmotorer.",
     imgSrc: "bilde1.jpg",
     altText: "Alternative text for image 1",
@@ -22,14 +22,14 @@ const cardData = [
   },
   {
     id: 4,
-    title: "Bestill time",
+    title: "Tid for service?",
     text: "Bestill time for service eller reparasjon.",
     imgSrc: "bilde4.jpg",
     altText: "Alternative text for image 1",
   },
   {
     id: 5,
-    title: "Hydraulikk",
+    title: "Hydraulikkverksted",
     text: "Vi presser hydraulikkslanger mens du venter.",
     imgSrc: "bilde5.jpeg",
     altText: "Alternative text for image 1",
