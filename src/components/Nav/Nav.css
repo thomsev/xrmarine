@@ -58,6 +58,27 @@
     top: 56px; /* Adjust this to the height of your collapsed navbar */
     z-index: 999; /* Ensure the dropdown is above other content */
   }
+  .white-icon {
+    color: white;
+    cursor: pointer;
+    font-size: 2.2rem; /* Makes it clear the icon is clickable */
+  }
+
+  /* This centers the icon vertically and provides some space around it */
+  .navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem; /* Adjust padding as needed */
+  }
+
+  /* Styling for the icon within the toggle button */
+  .navbar-toggler-icon {
+    display: flex; /* Aligns the icon horizontally */
+    align-items: center; /* Aligns the icon vertically */
+    justify-content: center; /* Centers the icon */
+    font-size: 1.25rem; /* Adjust the size of the icon */
+  }
 
   .navbar-nav .nav-link {
     background-color: rgba(
