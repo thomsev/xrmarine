@@ -8,7 +8,8 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
-import WorkshopPage from "./WorkshopPage";
+import WorkshopPage from "./components/WorkshopPage/WorkshopPage";
+
 import "./App.css";
 
 function App() {

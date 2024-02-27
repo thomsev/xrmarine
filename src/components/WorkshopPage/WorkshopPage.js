@@ -1,11 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWrench, faEngineWarning } from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faWrench, faCarEngine } from "@fortawesome/free-solid-svg-icons"; // Replace faEngineWarning with faCarEngine or another appropriate icon
 
 // Import images (assuming you have these images in your public folder or assets)
-import image2Placeholder from "./path/to/image2Placeholder.jpg";
-import image3Placeholder from "./path/to/image3Placeholder.jpg";
+import logo1 from "../Assets/logo1.jpg";
 
 const WorkshopPage = () => {
   return (
@@ -29,7 +28,7 @@ const WorkshopPage = () => {
             </li>
             <li>Service på de fleste motorer</li>
             <li>
-              <FontAwesomeIcon icon={faWrench} /> Motor og gir reparasjoner
+              {/* <FontAwesomeIcon icon={faWrench} /> Motor og gir reparasjoner */}
             </li>
             <li>Motor bytte, gir bytte</li>
             <li>
@@ -45,8 +44,8 @@ const WorkshopPage = () => {
             <li>Overbord ventiler samt gjennomføringer</li>
             <li>Bunnsmøring, polering og vedlikehold av båt</li>
             <li>
-              <FontAwesomeIcon icon={faEngineWarning} /> FLIR termofotografering
-              for feilsøking
+              {/* <FontAwesomeIcon icon={faCarEngine} /> FLIR termofotografering for */}
+              feilsøking
             </li>
             <li>Feilsøking på mekanisk samt elektrisk marine</li>
             <li>
@@ -67,7 +66,7 @@ const WorkshopPage = () => {
       <Row>
         <Col md={6}>
           <Card>
-            <Card.Img variant="top" src={image2Placeholder} />
+            <Card.Img variant="top" src={logo1} />
             <Card.Body>
               <Card.Title>Motor og gir reparasjoner</Card.Title>
               <Card.Text>
@@ -78,7 +77,7 @@ const WorkshopPage = () => {
         </Col>
         <Col md={6}>
           <Card>
-            <Card.Img variant="top" src={image3Placeholder} />
+            <Card.Img variant="top" src={logo1} />
             <Card.Body>
               <Card.Title>Bunnsmøring, polering og vedlikehold</Card.Title>
               <Card.Text>
