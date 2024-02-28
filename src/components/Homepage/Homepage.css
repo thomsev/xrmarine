@@ -118,22 +118,24 @@
 
   .background-image-section h1 {
     font-size: 3.5em;
+    margin-top: 200px;
   }
 
   .background-image-section h3 {
     font-size: 2em;
+    margin-top: 250px;
   }
 }
 
 @media (max-width: 768px) {
   .background-image-section h1 {
     font-size: 3.2em;
-    margin-top: 200px; /* Adjusted margin for smaller screens */
+    /* Adjusted margin for smaller screens */
   }
 
   .background-image-section h3 {
     font-size: 1.8em;
-    margin-top: 250px;
+    margin-top: 222px;
   }
 }
 
