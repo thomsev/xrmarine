@@ -14,7 +14,6 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    // Initialize AOS
     AOS.init({
       duration: 1200,
       once: true,
@@ -30,7 +29,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/workshop" element={<WorkshopPage />} />
-
           {/* Add more routes as needed */}
         </Routes>
         <Footer />
