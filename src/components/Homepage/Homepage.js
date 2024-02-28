@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import "./Homepage.css";
 import cardData from "../Assets/cardData";
 import sponsorsData from "../Assets/sponsorData";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   useEffect(() => {
@@ -36,17 +37,22 @@ const Homepage = () => {
                 data-aos="fade-up"
                 data-aos-delay={`${100 * index}`}
               >
-                <div className="card">
-                  <img
-                    src={require(`../Assets/${card.imgSrc}`)} // Using require to load the image from the Assets folder
-                    className="card-img-top"
-                    alt={card.altText}
-                  />
-                  <div className="card-body">
-                    <h2 className="card-title">{card.title}</h2>
-                    <p className="card-text">{card.text}</p>
+                <Link
+                  to={`/path-for-${card.title.toLowerCase()}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="card" style={{ cursor: "pointer" }}>
+                    <img
+                      src={require(`../Assets/${card.imgSrc}`)}
+                      className="card-img-top"
+                      alt={card.altText}
+                    />
+                    <div className="card-body">
+                      <h2 className="card-title">{card.title}</h2>
+                      <p className="card-text">{card.text}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

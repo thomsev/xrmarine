@@ -45,6 +45,11 @@
   margin: 0; /* Removes default margins */
   padding: 0; /* Removes default padding */
 }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
 /* Responsive adjustments for screens smaller than 768px (e.g., phones) */
 @media (max-width: 768px) {
