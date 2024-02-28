@@ -76,7 +76,8 @@
 }
 
 .card-title {
-  color: #007bff; /* Matching the section background or any color you prefer */
+  color: #007bff;
+  font-weight: 600;
 }
 .background-image-section h1 {
   color: #ffffff; /* White text color */
@@ -127,10 +128,12 @@
 @media (max-width: 768px) {
   .background-image-section h1 {
     font-size: 3.2em;
+    margin-top: 200px; /* Adjusted margin for smaller screens */
   }
 
   .background-image-section h3 {
     font-size: 1.8em;
+    margin-top: 300px;
   }
 }
 
