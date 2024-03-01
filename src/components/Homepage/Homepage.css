@@ -85,6 +85,7 @@
   font-weight: 999;
   margin: 0 0 20px; /* Space between the elements */
   padding: 0;
+  margin-top: -50px;
   transition: transform 0.3s ease-out, font-size 0.3s ease-out;
 }
 .background-image-section h3 {
@@ -135,7 +136,7 @@
 
   .background-image-section h3 {
     font-size: 1.8em;
-    margin-top: 222px;
+    margin-top: 166px;
   }
 }
 
