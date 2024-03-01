@@ -10,8 +10,6 @@
   align-items: center;
   color: #fff;
   text-align: center;
-  margin: 0; /* Removes default margins */
-  padding: 0; /* Removes default padding */
 }
 /* Additional styles for the navigation bar to make it transparent and overlay */
 .navbar {
@@ -41,8 +39,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0; /* Removes default margins */
-  padding: 0; /* Removes default padding */
 }
 .card:hover {
   transform: scale(1.05);
@@ -76,7 +72,7 @@
 }
 
 .card-title {
-  color: #007bff;
+  color: #000000;
   font-weight: 600;
 }
 .background-image-section h1 {
