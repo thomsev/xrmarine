@@ -83,16 +83,30 @@
 .card {
   background-color: #fff;
   color: #000;
+  border: none; /* Remove default border */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interactions */
 }
 
 .card img {
-  height: 200px; /* Adjust based on your preference */
+  height: 200px;
   object-fit: cover;
+  border-top-left-radius: 15px; /* Match the card's border radius */
+  border-top-right-radius: 15px; /* Match the card's border radius */
 }
-
+.card-body {
+  padding: 20px; /* Spacing inside the card */
+}
 .card-title {
-  color: #000000;
+  color: #007bff; /* Use the section's background color for consistency */
   font-weight: 600;
+  margin-bottom: 15px; /* Space between title and text */
+  font-size: 1.5rem; /* Larger font size for emphasis */
+}
+.card-section a {
+  text-decoration: none;
+  color: inherit;
 }
 .background-image-section h1 {
   color: #ffffff; /* White text color */

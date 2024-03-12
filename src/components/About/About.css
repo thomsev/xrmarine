@@ -1,0 +1,70 @@
+.main-content {
+  padding-top: 4rem;
+  padding-bottom: 2rem; /* Add some space at the bottom as well */
+}
+.about-page-wrapper {
+  padding-top: 4rem; /* Space for header */
+  background-image: url("../Assets/bakgrunn4.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep the background fixed during scroll */
+  background-position: center center; /* Center the background image */
+  min-height: 100vh; /* Full height */
+}
+.about-section {
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0.9; /* White background with opacity */
+  margin: 1rem auto;
+  margin-top: 8rem; /* Adds margin to the top and bottom, and auto centers horizontally */
+  padding: 2rem;
+  border-radius: 10px; /* Rounded corners */
+  width: 90%; /* Adjust the width as necessary */
+  max-width: 800px; /* Maximum width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  /* Rest of your styles for about-section */
+}
+
+.about-section h1,
+.about-section h2 {
+  color: #007bff; /* Gives headings a pop of color */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.about-section p {
+  line-height: 1.6; /* Increases line height for better readability */
+  color: #333; /* Slightly darker text for readability */
+  margin-bottom: 1em; /* Adds space between paragraphs */
+}
+
+.values-list {
+  list-style: none; /* Removes the default list styling */
+  padding: 0;
+  margin: 0 0 2em 0;
+}
+
+.values-list li {
+  background: #f8f9fa; /* Light background for list items */
+  margin-bottom: 0.5em; /* Space between list items */
+  padding: 0.5em;
+  border-left: 4px solid #007bff; /* Adds a colored bar to the left of list items */
+  transition: all 0.3s ease-in-out;
+}
+
+.values-list li:hover {
+  background: #e9ecef; /* Slightly darker background on hover */
+  border-left-color: #0056b3; /* Darker shade for the bar on hover */
+  transform: translateX(10px); /* Moves the list item to the right on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px;
+    text-align: center; /* Center text for smaller screens */
+  }
+  .about-section h1,
+  .about-section h2 {
+    text-align: center;
+  }
+}

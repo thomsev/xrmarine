@@ -13,7 +13,7 @@ const Homepage = () => {
       duration: 1200, // You can adjust the animation duration
     });
   }, []);
-  //do h1 with opacity background
+
   return (
     <div>
       {/* Background Image Section with AOS Animation */}

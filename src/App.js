@@ -24,13 +24,15 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/workshop" element={<WorkshopPage />} />
-          {/* Add more routes as needed */}
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/workshop" element={<WorkshopPage />} />
+            {/* Add more routes as needed */}
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
