@@ -15,7 +15,7 @@
   background: rgba(255, 255, 255, 0.9);
   opacity: 0.9; /* White background with opacity */
   margin: 1rem auto;
-  margin-top: 8rem; /* Adds margin to the top and bottom, and auto centers horizontally */
+  margin-top: 7rem; /* Adds margin to the top and bottom, and auto centers horizontally */
   padding: 2rem;
   border-radius: 10px; /* Rounded corners */
   width: 90%; /* Adjust the width as necessary */
