@@ -11,6 +11,17 @@
   background-position: center center; /* Center the background image */
   min-height: 100vh; /* Full height */
 }
+.about-page-wrapper::before {
+  content: ""; /* Necessary for the pseudo-element to work */
+  position: absolute; /* Positions it on top of the background image */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  /* Adjust the rgba values to change the color and opacity of the overlay */
+  /* For example, rgba(255, 255, 255, 0.5) for a white overlay */
+}
 .about-section {
   background: rgba(255, 255, 255, 0.9);
   opacity: 0.9; /* White background with opacity */
