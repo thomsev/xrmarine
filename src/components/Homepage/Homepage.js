@@ -10,10 +10,9 @@ import { Link } from "react-router-dom";
 const Homepage = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1200, // You can adjust the animation duration
+      duration: 1200,
     });
   }, []);
-
   return (
     <div>
       {/* Background Image Section with AOS Animation */}
