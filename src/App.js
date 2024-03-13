@@ -3,14 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./App.css";
 import Homepage from "./components/Homepage/Homepage";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import WorkshopPage from "./components/WorkshopPage/WorkshopPage";
-
-import "./App.css";
+import FinnListings from "./components/Finn/Finn";
+import Nettbutikk from "./components/Nettbutikk/Nettbutikk";
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/workshop" element={<WorkshopPage />} />
+            <Route path="/finn" element={<FinnListings />} />
+            <Route path="/nettbutikk" element={<Nettbutikk />} />
             {/* Add more routes as needed */}
           </Routes>
         </div>

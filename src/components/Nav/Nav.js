@@ -34,7 +34,7 @@ function Navigation() {
             <Nav.Link href="/finn" onClick={() => setExpanded(false)}>
               Finn Annonser
             </Nav.Link>
-            <Nav.Link href="/contact" onClick={() => setExpanded(false)}>
+            <Nav.Link href="/nettbutikk" onClick={() => setExpanded(false)}>
               Nettbutikk
             </Nav.Link>
             <Nav.Link href="/contact" onClick={() => setExpanded(false)}>

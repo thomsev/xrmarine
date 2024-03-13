@@ -4,6 +4,7 @@
   color: #ddd; /* Light grey text for readability */
   padding: 2rem 0; /* More vertical padding for a spacious look */
   font-size: 0.9rem; /* Adjust base font size */
+  margin-top: 0;
 }
 
 .footer-content {

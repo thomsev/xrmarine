@@ -1,0 +1,79 @@
+/* Positioning and styling for the container's pseudo-element */
+.container.mt-5::before {
+  content: "";
+  position: fixed; /* changed from absolute to fixed for full coverage */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../Assets/bakgrunn4.webp") center center / cover no-repeat
+    fixed; /* combined background properties */
+  z-index: -1; /* Make sure it stays behind other content */
+}
+
+/* General styling for product cards */
+.product-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for shadow as well */
+  margin-top: 6rem; /* To align with your given margin-top */
+}
+
+/* Hover effect for cards */
+.product-card:hover {
+  transform: translateY(-10px); /* slightly more lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* stronger shadow for depth */
+}
+
+/* Styling for the image within the card */
+.card-img-top {
+  border-top-left-radius: 10px; /* match the card's border radius */
+  border-top-right-radius: 10px;
+  height: 200px; /* fixed height for consistency */
+  object-fit: cover; /* ensure the image covers the area without stretching */
+}
+
+/* Styling for the card body, with padding for better spacing */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Typography and colors for the card title and text */
+.card-title {
+  color: #007bff; /* your brand color */
+  font-size: 1.25rem; /* slightly larger for better visibility */
+  margin-bottom: 0.5em;
+}
+
+.card-text {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1rem; /* standard font size for readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container.mt-5 {
+    padding-top: 1rem; /* Reduce top padding on small screens */
+  }
+
+  .container.mt-5::before {
+    background-attachment: scroll; /* Prevent fixed background on small devices */
+  }
+
+  .col-md-4.mb-4 {
+    margin-bottom: 1rem; /* Reduce margin between cards on small screens */
+  }
+
+  .product-card {
+    margin-top: 2rem; /* Less margin at the top for tighter mobile layout */
+  }
+
+  /* Adjust image height on smaller screens for a better fit */
+  .card-img-top {
+    height: auto; /* Allow image to adjust naturally */
+  }
+}

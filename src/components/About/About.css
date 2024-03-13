@@ -79,3 +79,41 @@
     text-align: center;
   }
 }
+/* Adjust the background image scaling and attachment for smaller screens */
+@media (max-width: 768px) {
+  .about-page-wrapper {
+    background-attachment: scroll; /* Allows the background to move with the scroll */
+    background-size: auto 100%; /* Adjusts the background size to better fit the screen */
+  }
+}
+
+/* Ensure that the main content and html/body stretch fully to avoid white space */
+html,
+body {
+  height: 100%; /* Make sure the html and body are at least as tall as the viewport */
+  margin: 0;
+  padding: 0;
+}
+
+.main-content,
+.about-page-wrapper {
+  min-height: 100vh; /* Full height viewport */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+  /* Adjust padding and potentially other properties that might affect layout */
+  .main-content {
+    padding-top: 2rem;
+    padding-bottom: 1rem; /* Less space at the bottom */
+  }
+
+  .about-section {
+    margin-top: 5rem; /* Adjust top margin to ensure it doesn't push down too much */
+    /* Ensure width and max-width are responsive to screen size */
+    width: 95%;
+    max-width: none; /* Allows the section to be more fluid */
+  }
+}
