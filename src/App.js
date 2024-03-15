@@ -12,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 import WorkshopPage from "./components/WorkshopPage/WorkshopPage";
 import FinnListings from "./components/Finn/Finn";
 import Nettbutikk from "./components/Nettbutikk/Nettbutikk";
+import Booking from "./components/Booking/Booking";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/workshop" element={<WorkshopPage />} />
             <Route path="/finn" element={<FinnListings />} />
             <Route path="/nettbutikk" element={<Nettbutikk />} />
+            <Route path="/booking" element={<Booking />} />
             {/* Add more routes as needed */}
           </Routes>
         </div>

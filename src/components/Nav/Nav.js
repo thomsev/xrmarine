@@ -37,10 +37,10 @@ function Navigation() {
             <Nav.Link href="/nettbutikk" onClick={() => setExpanded(false)}>
               Nettbutikk
             </Nav.Link>
-            <Nav.Link href="/contact" onClick={() => setExpanded(false)}>
+            <Nav.Link href="/booking" onClick={() => setExpanded(false)}>
               Bestill Time
             </Nav.Link>
-            <Nav.Link href="/contact" onClick={() => setExpanded(false)}>
+            <Nav.Link href="/booking" onClick={() => setExpanded(false)}>
               Verksted
             </Nav.Link>
           </Nav>
