@@ -19,7 +19,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
   /* Adjust the rgba values to change the color and opacity of the overlay */
   /* For example, rgba(255, 255, 255, 0.5) for a white overlay */
 }
@@ -68,7 +68,6 @@
 /* Responsive adjustments for screens smaller than 768px (e.g., phones) */
 @media (max-width: 768px) {
   .card-section {
-    flex-direction: column; /* Stack cards vertically */
     height: auto; /* Adjust height to fit content */
     padding: 20px; /* Add some padding */
   }
@@ -77,6 +76,15 @@
   .card {
     width: 100%; /* Make cards full width */
     margin-bottom: 20px; /* Add some space between cards */
+    /* If the card is not already a flex container, set it as one to stack children vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the flex items */
+  }
+  .card img {
+    height: auto; /* Make image height responsive */
+    width: 100%; /* Make image take full width of the card */
+    max-height: 200px; /* Optional: if you want to limit the max height */
   }
 }
 

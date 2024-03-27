@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
   /* Adjust the rgba values to change the color and opacity of the overlay */
   /* For example, rgba(255, 255, 255, 0.5) for a white overlay */
 }
