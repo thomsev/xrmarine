@@ -1,31 +1,28 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import "./Nettbutikk.css"; // Import custom CSS for Nettbutikk component
+import { Container, CardSection, ProductCard, Col } from "./NettButikkStyles";
 import products from "../Assets/products";
 
 const Nettbutikk = () => {
   return (
-    <div className="background-image-wrapper">
-      <div className="container mt-5">
-        <div className="row">
-          {products.map((product) => (
-            <div className="col-md-4 mb-4" key={product.id}>
-              <Card className="h-100 product-card">
-                <img
-                  src={require(`../Assets/${product.imgSrc}`)}
-                  className="card-img-top"
-                  alt={product.altText}
-                />
-                <Card.Body>
-                  <Card.Title>{product.title}</Card.Title>
-                  <Card.Text>{product.price}</Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <Container style={{ maxWidth: "1500px", margin: "10rem auto 0 auto" }}>
+      <CardSection>
+        {products.map((product) => (
+          <Col key={product.id}>
+            <ProductCard className="h-100">
+              <img
+                src={require(`../Assets/${product.imgSrc}`)}
+                className="card-img-top"
+                alt={product.altText}
+              />
+              <ProductCard.Body>
+                <ProductCard.Title>{product.title}</ProductCard.Title>
+                <ProductCard.Text>{product.price}</ProductCard.Text>
+              </ProductCard.Body>
+            </ProductCard>
+          </Col>
+        ))}
+      </CardSection>
+    </Container>
   );
 };
 

@@ -1,43 +1,80 @@
 import React from "react";
-import "./About.css"; // Make sure to create an About.css file and import it
+import styled from "styled-components";
+import aboutText from "./aboutData";
+
+const AboutWrapper = styled.div`
+  position: relative;
+  z-index: 1;
+  padding-top: 4rem;
+  width: 100%;
+`;
+
+const AboutSection = styled.div`
+  background: rgba(255, 255, 255, 0.9);
+  margin: 1rem auto;
+  margin-top: 7rem;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const Title = styled.h1`
+  color: #007bff;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+`;
+
+const Subtitle = styled.h2`
+  color: #007bff;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+`;
+
+const Paragraph = styled.p`
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1em;
+`;
+
+const ValuesList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em 0;
+`;
+
+const ValueItem = styled.li`
+  background: #f8f9fa;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border-left: 4px solid #007bff;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #e9ecef;
+    border-left-color: #0056b3;
+    transform: translateX(10px);
+  }
+`;
 
 function About() {
   return (
-    <div className="about-page-wrapper">
-      <div className="about-section">
-        <h1>Om oss</h1>
-        <p>
-          Welcome to our website! We are passionate about providing quality
-          content and services to our users.
-        </p>
-        <p>
-          Our mission is to enrich lives through innovative solutions and
-          engaging experiences. Founded in [Year], we have grown into a trusted
-          resource in our industry, committed to excellence and continuous
-          improvement.
-        </p>
-        <p>
-          Whether you're looking for [specific information or services], we
-          strive to offer the best. Our team is dedicated to ensuring you have
-          access to the most up-to-date and relevant information.
-        </p>
-        <h2>Våre verdier</h2>
-        <ul className="values-list">
-          <li>
-            Innovation: We constantly seek new ways to improve and make a
-            difference.
-          </li>
-          <li>
-            Integrity: We believe in being honest and transparent in all our
-            dealings.
-          </li>
-          <li>
-            Excellence: We set high standards for ourselves and our services.
-          </li>
-        </ul>
-        <p>Thank you for visiting our site. We look forward to serving you!</p>
-      </div>
-    </div> // Add the missing closing tag for the outermost <div> element
+    <AboutWrapper className="about-page-wrapper">
+      <AboutSection className="about-section">
+        <Title>{aboutText.title}</Title>
+        {aboutText.paragraphs.map((paragraph, index) => (
+          <Paragraph key={index}>{paragraph}</Paragraph>
+        ))}
+        <Subtitle>{aboutText.valuesTitle}</Subtitle>
+        <ValuesList className="values-list">
+          {aboutText.values.map((value, index) => (
+            <ValueItem key={index}>{value}</ValueItem>
+          ))}
+        </ValuesList>
+        <Paragraph>{aboutText.closing}</Paragraph>
+      </AboutSection>
+    </AboutWrapper>
   );
 }
 

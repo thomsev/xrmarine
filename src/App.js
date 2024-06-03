@@ -13,6 +13,7 @@ import WorkshopPage from "./components/WorkshopPage/WorkshopPage";
 import FinnListings from "./components/Finn/Finn";
 import Nettbutikk from "./components/Nettbutikk/Nettbutikk";
 import Booking from "./components/Booking/Booking";
+import GlobalStyles from "./components/GlobalStyles";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <Router>
+      <GlobalStyles />
       <div className="App">
         <Nav />
         <div className="content">

@@ -1,12 +1,15 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as Yup from "yup";
-import { Button, Modal } from "react-bootstrap";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import "./Booking.css";
+import {
+  BookingWrapper,
+  BookingSection,
+  Title,
+  FormGroup,
+  StyledButton,
+  StyledDatePicker,
+} from "./BookingStyles";
 
-// Yup validation schema
 const BookingSchema = Yup.object().shape({
   service: Yup.string().required("Required"),
   date: Yup.date().required("Required").nullable(),
@@ -16,27 +19,25 @@ const BookingSchema = Yup.object().shape({
 
 const Booking = () => {
   return (
-    <Formik
-      initialValues={{
-        service: "",
-        date: null,
-        time: "",
-        notes: "",
-      }}
-      validationSchema={BookingSchema}
-      onSubmit={(values, actions) => {
-        alert(JSON.stringify(values, null, 2));
-        actions.setSubmitting(false);
-      }}
-    >
-      {({ setFieldValue, values, isSubmitting }) => (
-        <Form>
-          <Modal.Dialog>
-            <Modal.Header>
-              <Modal.Title>Book a Time at Our Workshop</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <div className="form-group">
+    <BookingWrapper>
+      <BookingSection>
+        <Title>Book a Time at Our Workshop</Title>
+        <Formik
+          initialValues={{
+            service: "",
+            date: null,
+            time: "",
+            notes: "",
+          }}
+          validationSchema={BookingSchema}
+          onSubmit={(values, actions) => {
+            alert(JSON.stringify(values, null, 2));
+            actions.setSubmitting(false);
+          }}
+        >
+          {({ setFieldValue, values, isSubmitting }) => (
+            <Form>
+              <FormGroup>
                 <label htmlFor="service">Service Required</label>
                 <Field as="select" name="service" className="form-control">
                   <option value="">Select a Service</option>
@@ -49,12 +50,11 @@ const Booking = () => {
                   component="div"
                   className="invalid-feedback"
                 />
-              </div>
+              </FormGroup>
 
-              <div className="form-group">
+              <FormGroup>
                 <label htmlFor="date">Date</label>
-                <DatePicker
-                  className="form-control"
+                <StyledDatePicker
                   selected={values.date}
                   onChange={(date) => setFieldValue("date", date)}
                 />
@@ -63,9 +63,9 @@ const Booking = () => {
                   component="div"
                   className="invalid-feedback"
                 />
-              </div>
+              </FormGroup>
 
-              <div className="form-group">
+              <FormGroup>
                 <label htmlFor="time">Time</label>
                 <Field as="select" name="time" className="form-control">
                   <option value="">Select a Time</option>
@@ -78,23 +78,27 @@ const Booking = () => {
                   component="div"
                   className="invalid-feedback"
                 />
-              </div>
+              </FormGroup>
 
-              <div className="form-group">
+              <FormGroup>
                 <label htmlFor="notes">Additional Notes (optional)</label>
                 <Field as="textarea" name="notes" className="form-control" />
+              </FormGroup>
+
+              <div className="text-center">
+                <StyledButton
+                  type="submit"
+                  variant="primary"
+                  disabled={isSubmitting}
+                >
+                  Book Now
+                </StyledButton>
               </div>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary">Close</Button>
-              <Button variant="primary" type="submit" disabled={isSubmitting}>
-                Book Now
-              </Button>
-            </Modal.Footer>
-          </Modal.Dialog>
-        </Form>
-      )}
-    </Formik>
+            </Form>
+          )}
+        </Formik>
+      </BookingSection>
+    </BookingWrapper>
   );
 };
 
