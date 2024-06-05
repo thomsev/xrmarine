@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import BgImage from "../components/Assets/bakgrunn4.webp";
+const styled = { createGlobalStyle };
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = styled.createGlobalStyle`
   body {
     height: 100%;
     margin: 0;
@@ -25,8 +26,6 @@ const GlobalStyles = createGlobalStyle`
     background: rgba(0, 0, 0, 0.4);
     z-index: -1;
   }
-
-
 
   #root {
     min-height: 100vh;

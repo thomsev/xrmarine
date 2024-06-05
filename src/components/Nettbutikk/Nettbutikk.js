@@ -4,7 +4,7 @@ import products from "../Assets/products";
 
 const Nettbutikk = () => {
   return (
-    <Container style={{ maxWidth: "1500px", margin: "10rem auto 0 auto" }}>
+    <Container>
       <CardSection>
         {products.map((product) => (
           <Col key={product.id}>
