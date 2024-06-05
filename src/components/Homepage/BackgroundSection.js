@@ -13,10 +13,10 @@ const BackgroundSection = () => {
         <h1 data-aos="fade-up">Rogaland Marine</h1>
         <div className="button-wrapper" data-aos="fade-up" data-aos-delay="300">
           <button onClick={() => (window.location.href = "/contact")}>
-            Contact
+            Kontakt
           </button>
           <button onClick={() => (window.location.href = "/about")}>
-            About
+            Om Oss
           </button>
         </div>
       </div>
