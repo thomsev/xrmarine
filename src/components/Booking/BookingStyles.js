@@ -73,4 +73,6 @@ export const StyledDatePicker = styled(DatePicker)`
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   font-size: 1rem;
+  z-index: 1000; /* Ensure it is above other elements */
+  position: relative;
 `;

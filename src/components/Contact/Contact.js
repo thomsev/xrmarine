@@ -26,11 +26,10 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <ContactSection>
-        <Title>Contact Us</Title>
+        <Title>Kontakt Us</Title>
         {showThankYou && (
           <StyledAlert variant="success">
-            Thank you for contacting us! We will get back to you as soon as
-            possible.
+            Takk for din melding! Vi vil svare deg så snart som mulig.
           </StyledAlert>
         )}
         <Formik
