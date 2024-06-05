@@ -47,8 +47,20 @@ export const SponsorSection = styled.div`
 
 export const SlideTrack = styled.div`
   display: flex;
-  animation: ${scroll} 30s linear infinite; /* Faster animation for smoother effect */
+  animation: ${scroll} 30s linear infinite; /* Default animation speed */
   width: calc(260px * 28); /* Adjust for padding and duplicated logos */
+
+  @media (max-width: 1200px) {
+    animation-duration: 40s; /* Slower animation for smaller screens */
+  }
+
+  @media (max-width: 768px) {
+    animation-duration: 50s; /* Even slower animation for smaller screens */
+  }
+
+  @media (max-width: 576px) {
+    animation-duration: 60s; /* Slowest animation for the smallest screens */
+  }
 `;
 
 export const Slide = styled.div`
