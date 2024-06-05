@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <ContactSection>
-        <Title>Kontakt Us</Title>
+        <Title>Kontakt oss</Title>
         {showThankYou && (
           <StyledAlert variant="success">
             Takk for din melding! Vi vil svare deg så snart som mulig.
