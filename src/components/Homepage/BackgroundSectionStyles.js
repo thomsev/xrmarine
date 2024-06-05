@@ -112,6 +112,7 @@ export const BackgroundVideoSection = styled.div`
     margin-top: 20px;
     display: flex;
     gap: 20px;
+    justify-content: center;
 
     @media (max-width: 768px) {
       justify-content: center;
@@ -126,6 +127,7 @@ export const BackgroundVideoSection = styled.div`
       cursor: pointer;
       border-radius: 5px;
       transition: background-color 0.3s ease;
+      width: 30%;
 
       &:hover {
         background-color: #0056b3;
