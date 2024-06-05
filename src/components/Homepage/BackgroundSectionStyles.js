@@ -107,4 +107,35 @@ export const BackgroundVideoSection = styled.div`
       margin-top: 100px;
     }
   }
+
+  .button-wrapper {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+
+      @media (max-width: 576px) {
+        width: 30%;
+        padding: 15px;
+        font-size: 1em;
+      }
+    }
+  }
 `;

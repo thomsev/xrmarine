@@ -1,5 +1,5 @@
 import React from "react";
-import { BackgroundVideoSection } from "././BackgroundSectionStyles";
+import { BackgroundVideoSection } from "./BackgroundSectionStyles";
 import bgVideo from "./bakgrunnvideo.mp4";
 
 const BackgroundSection = () => {
@@ -11,9 +11,14 @@ const BackgroundSection = () => {
       </video>
       <div className="text-wrapper">
         <h1 data-aos="fade-up">Rogaland Marine</h1>
-        {/* <h3 data-aos="fade-up" data-aos-delay="300">
-          Der kvalitet møter havet. Fra produksjon til perfeksjon
-        </h3> */}
+        <div className="button-wrapper" data-aos="fade-up" data-aos-delay="300">
+          <button onClick={() => (window.location.href = "/contact")}>
+            Contact
+          </button>
+          <button onClick={() => (window.location.href = "/about")}>
+            About
+          </button>
+        </div>
       </div>
     </BackgroundVideoSection>
   );
