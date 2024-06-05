@@ -66,7 +66,7 @@ export const BackgroundVideoSection = styled.div`
     @media (max-width: 576px) {
       font-size: 3em;
       margin-top: 100px;
-      padding: 0 10px;
+      padding: 0 5px;
     }
 
     @media (max-width: 375px) {
