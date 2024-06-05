@@ -5,7 +5,7 @@ import bgVideo from "./bakgrunnvideo.mp4";
 const BackgroundSection = () => {
   return (
     <BackgroundVideoSection>
-      <video autoPlay loop muted>
+      <video autoPlay loop muted playsInline>
         <source src={bgVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
