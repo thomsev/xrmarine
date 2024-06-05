@@ -172,7 +172,7 @@ export const CardSection = styled.div`
     }
 
     .card-title {
-      color: #007bff;
+      color: black;
       font-weight: 600;
       margin-bottom: 15px;
       font-size: 1.5rem;
