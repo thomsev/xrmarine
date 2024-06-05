@@ -119,7 +119,7 @@ export const BackgroundVideoSection = styled.div`
     }
 
     button {
-      background-color: #007bff;
+      background-color: #2681c2;
       color: #fff;
       border: none;
       padding: 10px 20px;
