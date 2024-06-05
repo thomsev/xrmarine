@@ -100,6 +100,7 @@ export const BackgroundImageSection = styled.div`
 `;
 
 export const CardSection = styled.div`
+  position: relative;
   background: url("../Assets/bakgrunn4.webp") no-repeat center center;
   background-size: cover;
   height: 100vh;
@@ -110,6 +111,22 @@ export const CardSection = styled.div`
   align-items: center;
   text-align: center;
   color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
 
   @media (max-width: 768px) {
     height: auto;
