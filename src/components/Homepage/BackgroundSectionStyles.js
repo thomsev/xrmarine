@@ -21,7 +21,7 @@ export const BackgroundVideoSection = styled.div`
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1;
-    pointer-events: none; /* Prevent video interaction on mobile */
+    pointer-events: none;
   }
 
   &::before {
