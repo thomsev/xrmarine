@@ -168,7 +168,8 @@ export const CardSection = styled.div`
 
     @media (max-width: 767px) {
       width: 90%;
-      height: auto; /* Let it grow on small screens */
+      height: auto;
+      margin: 0 auto; /* ensures equal space on each side */
     }
 
     .card-image {
