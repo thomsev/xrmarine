@@ -101,25 +101,27 @@ export const BackgroundImageSection = styled.div`
 
 export const CardSection = styled.div`
   position: relative;
-  background: url("../Assets/bakgrunn4.webp") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../Assets/bakgrunn4.webp") no-repeat center center;
+  background-size: cover;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    backdrop-filter: blur(4px); /* optional "frosted" effect */
     z-index: 0;
   }
 
@@ -128,54 +130,102 @@ export const CardSection = styled.div`
     z-index: 1;
   }
 
-  @media (max-width: 768px) {
-    height: auto;
-    padding: 20px;
+  .container {
+    padding: 60px 0;
   }
 
-  .card {
-    background-color: #fff;
-    color: #000;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    overflow: hidden;
+    color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    /* Fixed-size on desktop */
+    width: 400px;
+    height: 280px;
 
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(31, 38, 135, 0.4);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
+      width: 90%;
+      height: auto; /* Let it grow on small screens */
+    }
+
+    .card-image {
       width: 100%;
-      margin-bottom: 20px;
+      height: 160px; /* portion of the total 280px height */
+      object-fit: cover;
+      display: block;
+    }
+
+    .glass-body {
+      /* We have 280 - 160 = 120px left for this area */
+      height: calc(100% - 160px);
+      padding: 10px 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
+      text-align: center;
 
-    img {
-      height: 200px;
-      object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      .glass-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
 
-      @media (max-width: 768px) {
-        height: auto;
-        width: 100%;
-        max-height: 200px;
+      .glass-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+
+      /* Reserve space for the button 
+         by not removing it from the layout, just make it invisible initially. */
+      .glass-btn {
+        /* Invisible but still takes up space */
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+
+        background-color: #2196f3;
+        color: #fff;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #1976d2;
+        }
       }
     }
 
-    .card-body {
-      padding: 20px;
-    }
-
-    .card-title {
-      color: black;
-      font-weight: 600;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
+    /* On hover, reveal the button */
+    &:hover .glass-btn {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 `;
